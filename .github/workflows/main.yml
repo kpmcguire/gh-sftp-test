@@ -11,6 +11,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: sftp://444.44/
+        ftp-server: sftp://45.33.68.85/
         ftp-username: root
         ftp-password: ${{ secrets.FTP_PASSWORD }}
