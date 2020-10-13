@@ -14,5 +14,5 @@ jobs:
         ftp-server: sftp://45.33.68.85:22/var/www/html
         ftp-username: root
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        known-hosts: 68.175.143.120 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgm7kFizncSo61t9r2D5/snVfkoxaeflpLKCRqlG1uieELmwapIWYazOznSI3Yr+SgEdugJz0tC8fKb3N/j9kzSHSHBCo/up7HZSXl2/7qaftE9K9b1KHpmYKsh7iGr3wNjfT8i+MVi5r0hr8MsDe/QsgTt6gQGeDJ2XxSud3LOQhHas=
+        known-hosts: 45.33.68.85 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJOiZ+pnd6W33LPMYEH2aEIG9KwZA2ODXAs+8pWkcSXWvZRO8yucP2Q9Thn147bEAewc1LVHIypj+H1Jqy+TLmg=
         # git-ftp-args: --insecure
