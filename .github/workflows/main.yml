@@ -1,16 +1,16 @@
-name: Deploy via ftp
 on: push
+name: Publish Website
 jobs:
-  deploy:
-    name: Deploy
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
+    - uses: actions/checkout@v2.1.0
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: ""
-        remoteDir: "/var/www/html"
+        fetch-depth: 2
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: 45.33.68.85:22/var/www/html
+        ftp-username: root
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
