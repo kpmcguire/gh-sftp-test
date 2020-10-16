@@ -11,9 +11,9 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@master
       with:
-        ftp-server: sftp://45.33.68.85:22/var/www/html
+        ftp-server: sftp://45.33.68.85:22/var/www/html/limited
         ftp-username: root
         ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: limited
         known-hosts: 45.33.68.85 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcpuSquvVuPAlWQuHtHwL/3itxQpZDbaQAe3HokTv1xp12TGNndk22LE7gS0ZKlrWJ1wKvrULdk4H2O0nqQfyh4KR/HAOP1Xccb92R37WHzuYYPj5z8DtwfCPDhPHNsItSRJMZydWkauceMLsRzUd1KhAtW/mbaHZDRnodcE9PUswNuqsjLTgQxEvKHhLE3nZWNGJWxfaROwb8nsP5jjatPBWpkex5hCOGP/MgL2sjprZH21BaETG0Yj+kMSgfbG8rulxQzporZxOdWOM+WeNi6v8tORQ0HwOrUuT56hoUBl43wqDTsl61lYIznDb2k7jf6QeuLVBqQotld3DqVfc5
 
-        # git-ftp-args: --insecure
