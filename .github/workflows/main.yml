@@ -5,15 +5,15 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@master
-      with:
-        ftp-server: sftp://45.33.68.85:22/var/www/html/limited
-        ftp-username: root
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: limited
-        known-hosts: 45.33.68.85 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcpuSquvVuPAlWQuHtHwL/3itxQpZDbaQAe3HokTv1xp12TGNndk22LE7gS0ZKlrWJ1wKvrULdk4H2O0nqQfyh4KR/HAOP1Xccb92R37WHzuYYPj5z8DtwfCPDhPHNsItSRJMZydWkauceMLsRzUd1KhAtW/mbaHZDRnodcE9PUswNuqsjLTgQxEvKHhLE3nZWNGJWxfaROwb8nsP5jjatPBWpkex5hCOGP/MgL2sjprZH21BaETG0Yj+kMSgfbG8rulxQzporZxOdWOM+WeNi6v8tORQ0HwOrUuT56hoUBl43wqDTsl61lYIznDb2k7jf6QeuLVBqQotld3DqVfc5
-
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@master
+        with:
+          ftp-server: ${{ secrets.FTP_DESTINATION }}
+          ftp-username: ${{ secrets.FTP_USER }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ${{ secrets.LOCAL_DIR }}
+          known-hosts: ${{ secrets.KNOWN_HOSTS }}
+          git-ftp-args: ${{ secrets.GIT_FTP_ARGS }}
