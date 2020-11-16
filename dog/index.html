@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head> 
+    <title>What!!!! - Commencement 2020 at UMBC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1045586-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "UA-1045586-1");
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <link href="/css/app.css" rel="stylesheet"></head>
+  <body>
+    <div id="skipnav"><a href="#main">Skip to main content</a></div>
+    <nav>   
+      <ul></ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="social.html">Social Toolkit</a></li>
+    </nav>
+    <div class="container">
+      <h1>Rub True Grit's Nose</h1>
+      <h2>With Patented Grit-o-Meter™ Technology</h2>
+      <h3>Choose your hand: </h3>
+      <ul class="hands">
+        <li>
+          <button data-hand="l" aria-label="choose light hand">🤚🏻</button>
+        </li>
+        <li> 
+          <button data-hand="ml" aria-label="choose medium-light  hand">🤚🏼</button>
+        </li>
+        <li> 
+          <button data-hand="m" aria-label="choose medium hand">🤚🏽</button>
+        </li>
+        <li> 
+          <button data-hand="md" aria-label="choose medium-dark hand">🤚🏾</button>
+        </li>
+        <li> 
+          <button data-hand="d" aria-label="choose dark hand">🤚🏿</button>
+        </li>
+        <input class="model-source" id="gritometer" type="hidden" value="0" autocomplete="off">
+        <input class="model-source" id="hand" type="hidden" value="default" autocomplete="off">
+        <h3>Grit-o-Meter™</h3>
+        <div class="gritometer-wrapper">
+          <progress class="gritometer-progress" value="0" max="100" data-model="gritometer"></progress>
+        </div>
+      </ul>
+      <div class="true-grit-wrapper"> 
+        <div class="nose"></div>
+      </div>
+      <h3 class="win hidden">You have now truly graduated.</h3>
+      <div class="confetti win hidden"></div>
+    </div>
+    <footer>
+      <p>this is the footer</p>
+    </footer>
+  <script src="/js/app.js"></script><script src="/js/vendor.js"></script></body>
+</html>
